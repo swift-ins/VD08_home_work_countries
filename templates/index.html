@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Случайная страна</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f0f0f0;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .card {
+            background: white;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        img {
+            width: 150px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>{{ country.name }}</h1>
+        <img src="{{ country.flag }}" alt="Флаг страны">
+        <p><strong>Столица:</strong> {{ country.capital }}</p>
+        <p><strong>Регион:</strong> {{ country.region }}</p>
+        <p><strong>Население:</strong> {{ country.population }}</p>
+
+        <form method="get">
+            <button type="submit">Показать другую страну</button>
+        </form>
+    </div>
+</body>
+</html>
